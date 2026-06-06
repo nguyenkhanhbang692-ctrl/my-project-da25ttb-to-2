@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hóa đơn đám cưới</title>
+
+    <!-- Liên kết CSS -->
+    <link rel="stylesheet" href="../css/style06.css">
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <th>STT</th>
+            <th>TÊN HÀNG</th>
+            <th>SỐ LƯỢNG</th>
+            <th>ĐƠN GIÁ</th>
+            <th>ĐVT</th>
+            <th>THÀNH TIỀN</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td class="tenhang">Thịt heo</td>
+            <td class="soluong">50kg</td>
+            <td class="dongia">110000</td>
+            <td>VND</td>
+            <td class="thanhtien"></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td class="tenhang">Thịt bò</td>
+            <td class="soluong">50kg</td>
+            <td class="dongia">260000</td>
+            <td>VND</td>
+            <td class="thanhtien"></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td class="tenhang">Tôm sú</td>
+            <td class="soluong">50kg</td>
+            <td class="dongia">250000</td>
+            <td>VND</td>
+            <td class="thanhtien"></td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td class="tenhang">Coca-Cola</td>
+            <td class="soluong">20 thùng</td>
+            <td class="dongia">180000</td>
+            <td>VND</td>
+            <td class="thanhtien"></td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td class="tenhang">Heo quay</td>
+            <td class="soluong">3</td>
+            <td class="dongia">15000000</td>
+            <td>VND</td>
+            <td class="thanhtien"></td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td class="tenhang">Bia Tiger</td>
+            <td class="soluong">20 thùng</td>
+            <td class="dongia">360000</td>
+            <td>VND</td>
+            <td class="thanhtien"></td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td class="tenhang">Bánh mì</td>
+            <td class="soluong">500 cái</td>
+            <td class="dongia">2500</td>
+            <td>VND</td>
+            <td class="thanhtien"></td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td class="tenhang">Bún</td>
+            <td class="soluong">20kg</td>
+            <td class="dongia">15000</td>
+            <td>VND</td>
+            <td class="thanhtien"></td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td class="tenhang">Rau củ</td>
+            <td class="soluong">20kg</td>
+            <td class="dongia">20000</td>
+            <td>VND</td>
+            <td class="thanhtien"></td>
+        </tr>
+
+        <tr>
+            <td>10</td>
+            <td class="tenhang">Dầu ăn</td>
+            <td class="soluong">15 chai</td>
+            <td class="dongia">42000</td>
+            <td>VND</td>
+            <td class="thanhtien"></td>
+        </tr>
+
+        <tr>
+            <td colspan="5">TỔNG THANH TOÁN</td>
+            <td id="tongthanhtoan"></td>
+        </tr>
+    </table>
+
+    <script>
+        const sl = document.getElementsByClassName("soluong");
+        const dg = document.getElementsByClassName("dongia");
+        const tt = document.getElementsByClassName("thanhtien");
+
+        let tongthanhtoan = 0;
+
+        for (let i = 0; i < sl.length; i++) {
+
+            let soluong = parseInt(sl[i].innerText);
+            let dongia = parseInt(dg[i].innerText);
+
+            let thanhtien = soluong * dongia;
+
+            tt[i].innerText = thanhtien.toLocaleString("vi-VN");
+
+            tongthanhtoan += thanhtien;
+        }
+
+        document.getElementById("tongthanhtoan").innerText =
+            tongthanhtoan.toLocaleString("vi-VN") + " VND";
+    </script>
+
+</body>
+</html>

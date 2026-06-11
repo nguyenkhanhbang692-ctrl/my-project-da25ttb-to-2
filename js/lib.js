@@ -1,4 +1,6 @@
 /*javascript */
+//Khai báo một đối tượng
+
 const sl = document.getElementsByClassName("soluong");
 const dg = document.getElementsByClassName("dongia");
 const tt = document.getElementsByClassName("thanhtien");
@@ -17,20 +19,27 @@ for(let i = 0; i < sl.length; i++)
     tongthanhtoan += thanhtien;
 }
 
-document.getElementById("tongthanhtoan").innerText =
-    tongthanhtoan.toLocaleString("vi-VN") + " VND";
+const tong = document.getElementById("tongthanhtoan");
+
+if(tong){
+    tong.innerText =
+        tongthanhtoan.toLocaleString("vi-VN") + " VND";
+}
     
 function inBCC(n)
 {
     let result = "";
     let i = 1;
-    while(i<=10);
-{
-    result += `${n} x ${i} = ${n*i} <br>`;
-    i++;
-}
-document.getElementById("result").innerHTML= result;
+
+    while(i <= 10)
+    {
+        result += `${n} x ${i} = ${n*i} <br>`;
+        i++;
     }
+
+    document.getElementById("result").innerHTML = result;
+}
+
 
 
 
@@ -89,4 +98,81 @@ function addItem(name, price, description, link, image)
 
     //Đưa khung chứa container-product-list vào container
     document.getElementById("container-product-list").appendChild(item);
+}
+
+
+//Khai báo một đối tượng
+const product = {
+    id:"1",
+    name:" Bánh Xèo",
+    price:25000,
+    description:"Trà sữa trân châu đường đen là thức uống kết hợp hoàn hảo giữa nền trà sữa béo ngậy...",
+    image:"../assets/images/banhxeo01.jpg",
+    link:"chi-tiet.html"
+};
+
+const products = [
+    { 
+        id:"1",
+    name:" Bánh Xèo",
+    price:25000,
+    description:"Trà sữa trân châu đường đen là thức uống kết hợp hoàn hảo giữa nền trà sữa béo ngậy...",
+    image:"../assets/images/banhxeo01.jfif",
+    link:"chi-tiet.html"
+    },
+    { 
+        id:"2",
+    name:"Heo Sữa",
+    price:2700000,
+    description:"Matcha Latte là thức uống kết hợp giữa bột matcha Nhật Bản và sữa tươi...",
+    image:"../assets/images/heosua01.jfif",
+    link:"chi-tiet.html"
+    },
+    {
+       id:"3",
+    name:"Bánh Bông Lan Trứng Muối",
+    price:52000,
+    description:"Trà đào cam sả là một thức uống giải khát vô cùng được ưa chuộng nhờ sự kết hợp hài hòa giữa vị ngọt thanh của đào, vị chua dịu của cam...",
+    image:"../assets/images/bonglan01.jfif",
+    link:"chi-tiet.html" 
+    },
+    {
+        id:"4",
+    name:"Bún Đậu Mắm Tôm",
+    price:70000,
+    description:"Sinh tố bơ là thức uống giải khát bổ dưỡng, nổi bật với hương vị béo ngậy, thơm mát...",
+    image:"../assets/images/bundau01.jfif",
+    link:"chi-tiet.html"
+    }
+
+
+];
+
+function addItemV2(product){
+    document.getElementById("product-list").innerHTML += `
+        <div class="col">
+            <div class="card product-item h-100">
+                <div class="product-image">
+                    <img class="card-img-top" src="${product.image}" alt="${product.name}">
+                </div>
+                <div class="card-body bg-light product-info">
+                    <h4 class="card-title">${product.name}</h4>
+                    <h5 class="card-text">${product.price} VNĐ</h5>
+                    <p class="card-text">${product.description}</p>
+                    <a class="btn btn-info" href="${product.link}">Xem chi tiết</a>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function loadAllProduct()
+{
+    let i = 0;
+
+    while(i < products.length)
+    {
+        addItemV2(products[i]);
+        i++;
+    }
 }

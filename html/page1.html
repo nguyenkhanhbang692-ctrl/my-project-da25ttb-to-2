@@ -1,44 +1,47 @@
 <!DOCTYPE html>
-<html lang = "vi">
-        <head>
-                <title> Đăng kí tài khoản</title>
-                <meta charset = "utf-8">
-				<link href = "../css/style02.css/" rel ="stylesheet">
-        </head>
-        <body>
-             <div class ="container">
-			 
-				<form id ="frmLogin">
-					<h2 id = "title">Đăng kí tài khoản</h2>
-					<div class = "form-group">
-						<label for = "txtUsername"> Họ và tên :</label>
-						<input class ="form-controls" type = "text" id = "txtUsername" name ="txtUsername">
-					</div>
-					<div class = "form-group">
-						<label for = "txtPassword"> Tuổi :</label>
-						<input  class ="form-controls"type = "Password" id = "txtPassword" name ="txtPassword">
-					</div>
-					<div class = "form-group">
-						<label for = "txtPassword"> Nơi ở  :</label>
-						<input  class= "form-controls"type = "Password" id = "txtPassword" name ="txtPassword">
-					</div>
-					<div class = "form-group">
-						<label for = "txtPassword"> email :</label>
-						<input  class= "form-controls"type = "Password" id = "txtPassword" name ="txtPassword">
-					</div>
-					<div class = "form-group">
-						<label for = "txtPassword"> Nhập mật khẩu :</label>
-						<input  class= "form-controls"type = "Password" id = "txtPassword" name ="txtPassword">
-					</div>
-					<div class = "form-group">
-						<label for = "txtPassword"> Nhập lại mật khẩu  :</label>
-						<input  class= "form-controls"type = "Password" id = "txtPassword" name ="txtPassword">
-					</div>
-					
-					<input class= "button" type = "submit" name = "sbLogin" id = "sbSignin" value = "sign in">
-				</form>
-			 </div>		
-					
-             
-        </body>
+<html lang="vi">
+<head>
+    <title>Đăng ký tài khoản</title>
+    <meta charset="utf-8">
+    <link href="../css/style02.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form id="frmRegister">
+            <h2 id="title">Đăng ký tài khoản</h2>
+            
+            <div class="form-group">
+                <label bit_contain="true" for="txtUsername">Họ và tên :</label>
+                <input class="form-controls" type="text" id="txtUsername" name="txtUsername">
+            </div>
+            
+            <div class="form-group">
+                <label for="txtAge">Tuổi :</label>
+                <input class="form-controls" type="number" id="txtAge" name="txtAge">
+            </div>
+            
+            <div class="form-group">
+                <label for="txtAddress">Nơi ở :</label>
+                <input class="form-controls" type="text" id="txtAddress" name="txtAddress">
+            </div>
+            
+            <div class="form-group">
+                <label for="txtEmail">Email :</label>
+                <input class="form-controls" type="email" id="txtEmail" name="txtEmail">
+            </div>
+            
+            <div class="form-group">
+                <label for="txtPassword">Nhập mật khẩu :</label>
+                <input class="form-controls" type="password" id="txtPassword" name="txtPassword">
+            </div>
+            
+            <div class="form-group">
+                <label for="txtConfirmPassword">Nhập lại mật khẩu :</label>
+                <input class="form-controls" type="password" id="txtConfirmPassword" name="txtConfirmPassword">
+            </div>
+            
+            <input class="button" type="submit" name="sbRegister" id="sbRegister" value="Sign up">
+        </form>
+    </div>     
+</body>
 </html>

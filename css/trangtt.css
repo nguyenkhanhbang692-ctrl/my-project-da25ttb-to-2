@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: blue;
+}
+
+.images {
+    width: 150px;
+    height: 150px;
+}
+
+.section-title {
+    background-color: blue;
+    color: white;
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+}
+
+a {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}

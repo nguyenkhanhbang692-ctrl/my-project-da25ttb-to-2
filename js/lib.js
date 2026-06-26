@@ -113,38 +113,37 @@ const product = {
 
 const products = [
     { 
-        id:"1",
-    name:" Bánh Xèo",
-    price:25000,
-    description:"Trà sữa trân châu đường đen là thức uống kết hợp hoàn hảo giữa nền trà sữa béo ngậy...",
-    image:"../assets/images/banhxeo01.jfif",
-    link:"chi-tiet.html"
+        id: "1",
+        name: "Bánh Xèo",
+        price: 25000,
+        description: "Vỏ bánh vàng ươm, giòn rụm bên ngoài, ngập tràn nhân tôm thịt, giá đỗ mọng nước bên trong. Cuộn tròn cùng rau rừng, chấm ngập nước mắm chua ngọt, chuẩn vị miền Tây sông nước.",
+        image: "../assets/images/banhxeo01.jfif",
+        link: "chi-tiet.html"
     },
     { 
-        id:"2",
-    name:"Heo Sữa",
-    price:2700000,
-    description:"Matcha Latte là thức uống kết hợp giữa bột matcha Nhật Bản và sữa tươi...",
-    image:"../assets/images/heosua01.jfif",
-    link:"chi-tiet.html"
+        id: "2",
+        name: "Heo Sữa Quay",
+        price: 2700000,
+        description: "Lớp da đỏ bóng, giòn tan như tan ngay trong miệng. Phần thịt heo sữa non tơ, mềm mọng, thấm đẫm 24 loại gia vị thảo mộc bí truyền. Đỉnh cao cho mọi bữa tiệc sang trọng.",
+        image: "../assets/images/heosua01.jfif",
+        link: "chi-tiet.html"
     },
     {
-       id:"3",
-    name:"Bánh Bông Lan Trứng Muối",
-    price:52000,
-    description:"Trà đào cam sả là một thức uống giải khát vô cùng được ưa chuộng nhờ sự kết hợp hài hòa giữa vị ngọt thanh của đào, vị chua dịu của cam...",
-    image:"../assets/images/bonglan01.jfif",
-    link:"chi-tiet.html" 
+        id: "3",
+        name: "Bánh Bông Lan Trứng Muối",
+        price: 52000,
+        description: "Cốt bánh bông lan mềm xốp, mướt mịn tựa như mây. Kết hợp hoàn hảo cùng sốt phô mai béo ngậy chảy tràn và những viên trứng muối vàng rực, mằn mặn, đậm đà khó cưỡng.",
+        image: "../assets/images/bonglan01.jfif",
+        link: "chi-tiet.html" 
     },
     {
-        id:"4",
-    name:"Bún Đậu Mắm Tôm",
-    price:70000,
-    description:"Sinh tố bơ là thức uống giải khát bổ dưỡng, nổi bật với hương vị béo ngậy, thơm mát...",
-    image:"../assets/images/bundau01.jfif",
-    link:"chi-tiet.html"
+        id: "4",
+        name: "Bún Đậu Mắm Tôm",
+        price: 70000,
+        description: "Mẹt bún đầy đặn với đậu hũ chiên vàng giòn rướm mỡ, thịt chân giò luộc mềm, chả cốm dẻo thơm. Chấm cùng mắm tôm Thanh Hóa đánh bông chanh ớt, hương vị mê đắm lòng người.",
+        image: "../assets/images/bundau01.jfif",
+        link: "chi-tiet.html"
     }
-
 
 ];
 
@@ -176,3 +175,17 @@ function loadAllProduct()
         i++;
     }
 }
+// Cấu trúc HTML mẫu mà hàm loadAllProduct() cần sinh ra cho mỗi sản phẩm:
+`<div class="col">
+    <div class="product-item">
+        <div class="product-image">
+            <img src="đường_dẫn_ảnh.jpg" class="card-img-top">
+        </div>
+        <div class="product-info">
+            <h4 class="card-title">Tên Sản Phẩm</h4>
+            <h5 class="card-text">Giá Tiền</h5>
+            <p class="card-text">Mô tả sản phẩm...</p>
+            <a href="#" class="btn btn-info">Xem chi tiết</a>
+        </div>
+    </div>
+</div>`
